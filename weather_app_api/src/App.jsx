@@ -4,6 +4,7 @@ import search_icon from './assets/search.png';
 
 function App() {
   const default_location = "Berkeley";
+  const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
   const [data, setData] = useState(null);
   const [location, setLocation] = useState(default_location);
   const [inputValue, setInputValue] = useState('');
@@ -22,7 +23,7 @@ function App() {
   }, []);
 
   function getURL(location) {
-    return `https://api.openweathermap.org/data/2.5/weather?q=${location || default_location}&appid=517feb39adde6738e7a29aefca6a4bfe`;
+    return `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`;
   }
 
   function tempConvert(temp) {
