@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Poppins;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+p {
+  font-size: 2rem; /* Increased font size for better readability */
+}
+
+h1 {
+  font-size: 8rem; /* Increased font size for better readability */
+  margin-bottom: 10px; /* Add spacing below */
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spread content evenly */
+  align-items: center;
+  padding: 20px; /* Add padding for spacing */
+}
+
+.app:before {
+  content: '';
+  background: url('./assets/images.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.search {
+  position: relative; /* Remove absolute positioning */
+  width: 60%; /* Widen the search bar */
+  max-width: 600px; /* Larger max width */
+  margin-top: 40px; /* Add spacing from the top */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* Increase space between input and button */
+  padding: 15px; /* Increase padding */
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-input {
+  flex: 1;
+  font-family: Poppins, sans-serif;
+  font-size: 1.5rem; /* Increased font size */
+  padding: 15px; /* Increased padding */
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.search-input:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 15px; /* Increased padding */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.container {
+  max-width: 1200px; /* Increased width */
+  width: 90%; /* Flexible width */
+  margin: auto;
+  padding: 20px; /* Add padding for spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto; /* Adjust height */
+}
+
+.app .top {
+  width: 100%;
+  margin: 0 auto; /* Center the content horizontally */
+  text-align: center; /* Center align text */
+  position: relative;
+  top: 15%; /* Move the content closer to the top of the page */
+  transform: translateY(-50%); /* Adjust alignment within the container */
+}
+
+.app .description {
+  font-size: 2rem; /* Ensure the description is readable */
+  margin-bottom: 20px; /* Add spacing below */
+}
+
+.app .temperature {
+  font-size: 6rem; /* Adjust the size of the temperature */
+  font-weight: 700; /* Bold for emphasis */
+  margin-bottom: 10px; /* Add some spacing below */
+}
+
+.app .bottom {
+  display: flex;
+  justify-content: space-around; /* Spread items evenly */
+  text-align: center;
+  width: 100%;
+  padding: 20px; /* Increase padding */
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 1.8rem; /* Increase font size */
+  margin-top: 20px; /* Increase spacing from the rest of the content */
+}
+
+.bold {
+  font-weight: 700;
+}
